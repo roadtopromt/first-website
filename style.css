@@ -1,0 +1,233 @@
+/* Общие стили для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+header {
+    text-align: center;
+    background-color: #3a3a3a;
+    color: rgb(255, 254, 254);
+    padding: 25px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Уменьшенный отступ для секции "Мои работы" */
+.works-section {
+    margin-top: 10px !important;
+}
+
+/* Стили для ссылки на GitHub */
+.github-link {
+    background-color: #24292e;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 25px;
+    color: #ffffff !important;
+    text-decoration: none;
+    border: 2px solid #24292e;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #ffffff;
+    color: #24292e !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Стили для ссылок с фотографиями */
+.photo-link {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
+    border: none !important;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.photo-link:hover {
+    background-color: transparent !important;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ГАЛЕРЕЯ С БОЛЬШИМИ ОТСТУПАМИ */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 50px; /* УВЕЛИЧЕНО с 20px до 50px */
+    height: auto;
+    min-height: 100px;
+    overflow-x: auto;
+    padding: 20px 0; /* УВЕЛИЧЕНО padding */
+    margin: 20px 0; /* Добавлен отступ сверху и снизу */
+}
+
+.gallery img {
+    margin: 0;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.gallery img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+div {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Общие стили для всех ссылок */
+a {
+    color: #4ecdc4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 15px; /* ДОБАВЛЕНО: внутренний отступ для каждого элемента */
+    background-color: #f8f9fa; /* ДОБАВЛЕНО: легкий фон для каждого элемента */
+    border-radius: 15px; /* ДОБАВЛЕНО: скругление углов */
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    background-color: #e9ecef; /* ДОБАВЛЕНО: изменение фона при наведении */
+    transform: translateY(-5px); /* ДОБАВЛЕНО: подъем элемента при наведении */
+}
+
+.image-caption {
+    margin-top: 20px; /* УВЕЛИЧЕНО с 15px до 20px */
+    font-weight: bold;
+    color: #333;
+    font-size: 16px; /* УВЕЛИЧЕНО с 14px */
+}
+
+.my-photos-text {
+    margin-top: 30px;
+    margin-bottom: 30px; /* УВЕЛИЧЕНО с 20px до 30px */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Адаптивность с увеличенными отступами */
+@media (max-width: 1200px) {
+    .gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* УВЕЛИЧЕНО для планшетов */
+    }
+    
+    .gallery img {
+        width: 180px;
+        height: 135px;
+    }
+    
+    .gallery-item {
+        padding: 12px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px; /* УВЕЛИЧЕНО для мобильных */
+        justify-content: center;
+    }
+    
+    .gallery img {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .image-caption {
+        font-size: 14px; /* УВЕЛИЧЕНО */
+        margin-top: 15px;
+    }
+    
+    .gallery-item {
+        padding: 10px;
+        margin: 8px;
+    }
+    
+    header {
+        padding: 15px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        gap: 25px; /* УВЕЛИЧЕНО для маленьких экранов */
+    }
+    
+    .gallery img {
+        width: 130px;
+        height: 100px;
+    }
+    
+    .image-caption {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    
+    .gallery-item {
+        padding: 8px;
+        margin: 6px;
+    }
+    
+    .my-photos-text {
+        margin-bottom: 25px;
+    }
+}
+
+/* Дополнительные стили для лучшего визуального разделения */
+.gallery-item:not(:last-child) {
+    margin-right: 10px; /* Дополнительный отступ между элементами */
+}
