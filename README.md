@@ -22,7 +22,7 @@ my-portfolio/
 ## 🌐 Посмотреть онлайн
 
 Сайт размещен на GitHub Pages:  
-[https://roadtopromt.github.io/my-first-website](https://roadtopromt.github.io/my-first-website)
+[https://roadtopromt.github.io/first-website/](https://roadtopromt.github.io/first-website/)
 
 ## 🛠 Как собрать и посмотреть локально?
 

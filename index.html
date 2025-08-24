@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя страничка</title>
+    <title data-translate="title">Моя страничка</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Привет, Меня зовут Никита и это мое начало в it</h1>
-        <button id="themeToggle" >🌙 Тёмная тема</button>
+        <h1 data-translate="greetings">Привет, Меня зовут Никита и это мое начало в it</h1>
+        <button id="themeToggle" data-translate="themeText">🌙 Тёмная тема</button>
+        <a href="resume.pdf" download class="download-btn" data-translate="resume">📄 Скачать резюме</a>
+        <button id="translations" data-translate="langButton">🌐 translation</button>
     </header>
 
     <main>
         <section>
-            <h2>Обо мне</h2>
-            <p>Мне 17 лет, и это мой первый опыт создания сайта.</p>
-            <p>Люблю музыку, качественное кино, а также прокачивать свои навыки в чем либо.</p>
-            <p class="my-photos-text">Соц.Сети: </p>
+            <h2 data-translate="about">Обо мне</h2>
+            <p data-translate="age">Мне 17 лет, и это мой первый опыт создания сайта.</p>
+            <p data-translate="hobby">Люблю музыку, качественное кино, а также прокачивать свои навыки в чем либо.</p>
+            <p class="my-photos-text" data-translate="media">Соц.Сети: </p>
             <div class="gallery">
                 <div class="gallery-item">
                     <a href="https://t.me/thenik39" target="_blank" class="photo-link">
@@ -57,18 +59,18 @@
         </section>
 
         <section>
-            <h2>Мои навыки</h2>
+            <h2 data-translate="skills">Мои навыки</h2>
             <ul>
-                <li>адаптация</li>
-                <li>музыкальный вкус</li>
-                <li>настойчивость</li>
+                <li data-translate="adaptation">адаптация</li>
+                <li data-translate="musicaltaste">музыкальный вкус</li>
+                <li data-translate="perseverance">настойчивость</li>
             </ul>
         </section>
 
         <section class="works-section">
-            <h2>Мои работы</h2>
-            <p>А здесь я потом покажу свои проекты.</p>
-            <a href="https://github.com/roadtopromt" target="_blank" class="github-link">Мой GitHub</a>
+            <h2 data-translate="works">Мои работы</h2>
+            <p data-translate="linkgh">А здесь я потом покажу свои проекты.</p>
+            <a href="https://github.com/roadtopromt" target="_blank" class="github-link" data-translate="githubLink">Мой GitHub</a>
         </section>
     </main>
 

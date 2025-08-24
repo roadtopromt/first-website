@@ -268,3 +268,86 @@ body.dark-theme section {
     color: #f0f0f0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
+/* Стили для кнопки скачивания */
+.download-btn {
+    display: inline-block;
+    background-color: #6a11cb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+    background-color: #4a00b8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Плавная прокрутка для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Адаптивность для кнопок */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #themeToggle, .download-btn {
+        margin: 5px 0;
+    }
+}
+
+#translations {
+    background-color: #4e81cd;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#translations:hover {
+    background-color: #3abab1;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+html {
+  scroll-behavior: smooth;
+}
+[data-translate] {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Класс для анимации */
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Стили для иконок темы */
+#themeToggle::before {
+    content: "🌙";
+    margin-right: 5px;
+}
+
+body.dark-theme #themeToggle::before {
+    content: "☀️";
+}
