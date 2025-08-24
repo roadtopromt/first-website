@@ -4,6 +4,7 @@ body {
     margin: 20px;
     padding: 20px;
     background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -22,6 +23,7 @@ section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Уменьшенный отступ для секции "Мои работы" */
@@ -230,4 +232,39 @@ a:hover {
 /* Дополнительные стили для лучшего визуального разделения */
 .gallery-item:not(:last-child) {
     margin-right: 10px; /* Дополнительный отступ между элементами */
+}
+#themeToggle {
+    background-color: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#themeToggle:hover {
+    background-color: #3abab1;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+/* СТИЛИ ДЛЯ ТЕМНОЙ ТЕМЫ */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-theme header {
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-theme section {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
