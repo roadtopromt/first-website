@@ -1,4 +1,3 @@
-/* Общие стили для body */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -350,4 +349,376 @@ html {
 
 body.dark-theme #themeToggle::before {
     content: "☀️";
+}
+/* Секция проектов */
+.projects-section {
+    padding: 40px 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1.5px solid #bbbbbb;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.project-links a {
+    background: #4ecdc4;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background: #3abab1;
+    transform: scale(1.05);
+}
+
+.project-links span {
+    background: #6c757d;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.project-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech span {
+    background: #d1d1d1;
+    color: #5e6872;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* Стили для coming-soon */
+.project-card.coming-soon {
+    opacity: 0.8;
+    filter: grayscale(20%);
+}
+
+.project-card.coming-soon:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-links {
+        align-self: flex-start;
+    }
+}
+
+/* Для тёмной темы */
+body.dark-theme .project-card {
+    background: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-theme .project-header h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .project-card p {
+    color: #cccccc;
+}
+
+body.dark-theme .project-tech span {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Анимации появления при скролле */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Задержки для последовательного появления */
+.fade-in.delay-1 { transition-delay: 0.1s; }
+.fade-in.delay-2 { transition-delay: 0.2s; }
+.fade-in.delay-3 { transition-delay: 0.3s; }
+.fade-in.delay-4 { transition-delay: 0.4s; }
+
+/* Специфичные анимации для разных элементов */
+.project-card {
+    transition: all 0.5s ease;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.modal-tech span {
+    background: #d1d1d1;
+    color: #495057;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.modal-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    background: #4ecdc4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.modal-btn:hover {
+    background: #3abab1;
+    transform: translateY(-2px);
+}
+
+.modal-btn:nth-child(2) {
+    background: #6a11cb;
+}
+
+.modal-btn:nth-child(2):hover {
+    background: #4a00b8;
+}
+
+/* Для тёмной темы */
+body.dark-theme .modal-content {
+    background: #2d2d2d;
+    color: white;
+}
+
+body.dark-theme .modal-tech span {
+    background: #3a3a3a;
+    color: white;
+}
+
+body.dark-theme .close-modal {
+    color: #ccc;
+}
+
+body.dark-theme .close-modal:hover {
+    color: white;
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 20px 40px rgba(0, 255, 238, 0.5);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafa 100%);
+}
+
+body.dark-theme .project-card:hover {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+/* Fix for animation conflicts */
+.project-card {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+.modal-content {
+    transition: transform 0.3s ease !important;
+}
+
+.fade-in {
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+}
+
+/* Remove conflicting transitions */
+.project-card {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #ffffff !important;
+    background-color: #3abab1 !important;
+    
+    box-shadow: 0 4px 12px rgba(58, 186, 177, 0.4);
+}
+
+/* Добавьте это в ваш CSS */
+html {
+    overflow-y: scroll; /* Всегда показывать вертикальную полосу прокрутки */
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    /* остальные ваши стили */
+}
+
+/* Модифицируйте стиль для модального окна */
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    padding-right: 17px; /* Компенсируем ширину полосы прокрутки */
+}
+
+/* Фиксируем ширину контента */
+body {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Убедитесь, что все секции имеют стабильную ширину */
+section, header, .gallery {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Для модального окна */
+.modal {
+    position: fixed;
+    overflow-y: auto; /* Добавляем прокрутку для модального окна если нужно */
 }

@@ -72,11 +72,84 @@
             <p data-translate="linkgh">А здесь я потом покажу свои проекты.</p>
             <a href="https://github.com/roadtopromt" target="_blank" class="github-link" data-translate="githubLink">Мой GitHub</a>
         </section>
+        
+
+
+        <section class="projects-section">
+    <h2 data-translate="projects">Мои проекты</h2>
+    
+    <div class="projects-grid">
+        <!-- Проект 1 - Этот сайт -->
+        <div class="project-card" data-tech="html css js git" data-project="portfolio">
+            <div class="project-header">
+                <h3 data-translate="project1Title">Персональный сайт-портфолио</h3>
+                <div class="project-links">
+                    <a href="https://github.com/roadtopromt/first-website" target="_blank">GitHub</a>
+                    
+                </div>
+            </div>
+            <p data-translate="project1Desc">Сайт, который вы сейчас просматриваете. Реализована тёмная тема, многоязычность и адаптивный дизайн.</p>
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+            </div>
+        </div>
+
+        <!-- Проект 2 - Заглушка -->
+        <div class="project-card coming-soon" data-tech="html css js" data-project="quiz">
+            <div class="project-header">
+                <h3 data-translate="project2Title">Игра "Викторина"</h3>
+                <div class="project-links">
+                    <span>Soon</span>
+                </div>
+            </div>
+            <p data-translate="project2Desc">Интерактивная викторина с вопросами по программированию. В разработке.</p>
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+
+        <!-- Проект 3 - Заглушка -->
+        <div class="project-card coming-soon" data-tech="html css api" data-project="weather">
+            <div class="project-header">
+                <h3 data-translate="project3Title">Погодное приложение</h3>
+                <div class="project-links">
+                    <span>Soon</span>
+                </div>
+            </div>
+            <p data-translate="project3Desc">Приложение для просмотра погоды с использованием API. В разработке.</p>
+            <div class="project-tech">
+                <span>API</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>
         <p>© 2025 Моя страничка</p>
     </footer>
 <script src="script.js"></script>
+
+<!-- Модальное окно -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="modal-tech" id="modalTech"></div>
+        <div class="modal-links">
+            <a href="#" id="modalGitHub" target="_blank" class="modal-btn">GitHub</a>
+            <a href="#" id="modalDemo" target="_blank" class="modal-btn">Demo</a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
